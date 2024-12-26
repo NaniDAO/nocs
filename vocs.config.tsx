@@ -57,6 +57,10 @@ export default defineConfig({
       link: "/docs/create-account",
     },
     {
+      text: "Navigating OS",
+      link: "/docs/navigating-os"
+    },
+    {
       text: "DAO",
       link: "/docs/dao",
     },
