@@ -79,7 +79,11 @@ export default defineConfig({
     {
       text: "Token",
       link: "/docs/token",
-    }
+    },
+    {
+      text: "Bounties",
+      link: "/docs/bounties",
+    },
   ],
   socials: [
     {
