@@ -81,6 +81,10 @@ export default defineConfig({
       link: "/docs/token",
     },
     {
+      text: "Tokenomics",
+      link: "/docs/tokenomics",
+    },
+    {
       text: "Bounties",
       link: "/docs/bounties",
     },
