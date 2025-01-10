@@ -1,3 +1,75 @@
 ---
 layout: docs
 ---
+
+# IE
+
+The [Intents Engine (IE)](https://docs.nani.ooo/docs/ie) is a defi router that parses natural language into executable calldata.
+
+This protects user intents against malformed txs that don't accurately reflect their goals. 
+
+It also provides a simple way for LLM and other agents to have tx-capabilities today: just summarize requests into commands.
+
+## Syntax
+
+Commands are strings. They should be intuitive to what you would say to another person or type into a terminal.
+
+*Note:* 
+
+- Token Symbols and usernames can upper-or-lowercase. IE normalizes all text into lowercase. 
+
+- "for/to" are interchangeable.
+
+- You can also use an 0x address for token or user if you don't know their symbol/username or IE doesn't.
+
+Here are examples of the command syntax that works with IE to route commands:
+
+### Swaps
+
+Initially, Uniswapv3 pool swaps. Therefore tokens should have a pool.
+
+#### Exact-in
+
+- "swap 20 DAI to ETH"
+
+#### Min-out
+
+- "swap 4000 DAI for 1 ETH"
+
+#### Exact-out
+
+- "swap USDC to 1 ETH"
+
+#### Swap-for-user
+
+Simply add a "to"/for" after swap with username or 0x address.
+
+- "swap USDC to 1 ETH for vitalik"
+
+- "swap USDC for 1 ETH for 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+
+### Sends
+
+- "send z0r0z 20 dai"
+
+- "send 20 dai to z0r0z"
+
+### Escrows
+
+The depositor controls release. Can reclaim after timelock.
+
+- "escrow nick 20 dai for 99 days"
+
+### Lockups
+
+The recipient controls release after timelock. Can refund back to depositor.
+
+- "lock nick 20 dai for 99 days"
+
+### Orders
+
+Create an onchain order within the IE orderbook. Supports ETH, ERC20 and ERC721.
+
+- "order 1 weth for 4000 dai"
+
+
