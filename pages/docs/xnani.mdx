@@ -1,0 +1,62 @@
+---
+layout: docs
+---
+
+# FAQ: xNANI Staking
+
+## 1. What is xNANI?
+xNANI is a nontransferable staking token that represents staked NANI tokens. When users stake their NANI tokens, they receive xNANI in return, representing their share of the staking pool. xNANI serves as both a governance token and a way to participate in Nani DAO's ecosystem.
+
+## 2. What makes xNANI special?
+Unlike many other staking tokens, xNANI is nontransferable, meaning it cannot be traded or transferred between wallets. This unique feature ensures that stakers remain committed to the ecosystem and helps prevent gaming of onchain votes.
+
+## 3. How does staking work with xNANI?
+To stake NANI tokens, users interact with the xNANI contract at `0x000000000000629d5F7ce20b868D0Ac1739104B9` on either Ethereum or Base chains. When staking, users receive xNANI tokens proportional to their stake in the total pool. The staking ratio is determined by the total amount of NANI in the contract versus the total xNANI supply.
+
+## 4. How is the xNANI/NANI exchange rate calculated?
+The exchange rate between xNANI and NANI is determined by the following formula:
+- When staking: `amount * totalShares / totalNani`
+- When unstaking: `share * totalNani / totalSupply`
+
+This rate ensures fair distribution of staking shares and accurate unstaking amounts.
+
+## 5. What are the benefits of holding xNANI?
+As an xNANI holder, you:
+- Participate in NANI DAO governance
+- Enjoy non-rate-limited AI agent chat
+- Receive airdrops and other incentives
+
+## 6. How do I unstake my NANI?
+To unstake, interact with the xNANI contract's unstake function, specifying the amount of xNANI shares you wish to convert back to NANI. The contract will calculate the appropriate amount of NANI to return based on the current exchange rate.
+
+## 7. Can I transfer my xNANI to another wallet?
+No, xNANI is intentionally designed to be nontransferable. This design choice helps maintain the integrity of the staking system and ensures direct participation from stakers.
+
+## 8. On which networks is xNANI available?
+xNANI is available on both:
+- Ethereum Mainnet (`0x000000000000629d5F7ce20b868D0Ac1739104B9`)
+- Base Network (`0x000000000000629d5F7ce20b868D0Ac1739104B9`)
+
+## 9. How can I check my staked balance?
+You can check your staked balance by:
+1. Calling the `stakedBalance()` function with your address
+2. Using blockchain explorers to view your xNANI balance
+3. Interacting with the NANI agent in nani.ooo/chat
+
+## 10. What should I know about security?
+- Always verify the contract address before interacting
+- Ensure you're connected to the correct network
+- Remember that xNANI cannot be transferred, so be careful when staking
+- Keep your wallet secure as lost access means lost staking positions
+
+## 11. Where can I learn more about NANI DAO and xNANI?
+For more information, please refer to:
+- NANI DAO GitHub [repository](https://github.com/NaniDAO)
+- Official documentation and posts from [X media account](https://twitter.com/nani__ooo)
+- Community channels such as [Discord](https://discord.com/invite/P8FbGGtst8)
+
+## 12. What are the technical specifications of xNANI?
+- Token Name: `xNANI`
+- Decimals: `18`
+- Contract Standard: `ERC-20`, `Solidity 0.8.27`
+- License: `AGPL-3.0-only`

@@ -85,6 +85,10 @@ export default defineConfig({
       link: "/docs/tokenomics",
     },
     {
+      text: "xNANI",
+      link: "/docs/xnani",
+    },
+    {
       text: "Bounties",
       link: "/docs/bounties",
     },
